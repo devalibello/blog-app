@@ -84,12 +84,6 @@ After you're finished please remove all the comments and instructions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](COMING SOON)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -197,8 +191,6 @@ If you like this project, kindly share my github repo with your friends and foll
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank the developers of Ruby and Ruby on Rails.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
