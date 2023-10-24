@@ -165,6 +165,7 @@ Example:
 
 - [ ] **[Add associations]**
 - [ ] **[Add controller and configure the view]**
+- [ ] **[Methods in models to interact directly with database for specific requirements]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
