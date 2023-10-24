@@ -145,6 +145,9 @@ To check for Ruby errors:
 - bundle install
 - rails generate rspec:install
 
+- To run test:
+- rspec
+
 <!--
 Example:
 
