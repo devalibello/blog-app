@@ -5,10 +5,10 @@ class Post < ApplicationRecord
   after_create :post_counter
 
   def post_counter
-      author.update(postcounter: author.posts.count)
+    author.update(postcounter: author.posts.count)
   end
 
   def first_five_posts
-      self.comments.order(created_at: :desc).limit(5)
+    comments.order(created_at: :desc).limit(5)
   end
 end
