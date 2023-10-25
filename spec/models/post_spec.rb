@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:user) { User.create(name: 'John') }
+  let(:user) { User.create(name: 'John', postcounter: 0) }
 
   it 'title valid with a title' do
-    first_user = User.first
-    post = Post.new(author: first_user, title: 'my first post', commentscounter: 0, likescounter: 0)
+    # first_user = User.first
+    post = Post.new(author: user, title: 'my first post', commentscounter: 0, likescounter: 0)
     expect(post).to be_valid
   end
 
