@@ -81,6 +81,8 @@ After you're finished please remove all the comments and instructions!
 
 - **[ Has database tables schema integrated with PostgreSQL ]**
 - **[ Has linters setup enforcing best coding practices ]**
+- [ ] **[Methods in models to interact directly with database for specific requirements]**
+- [ ] **[Contails test files for validations and methods using RSpec]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,6 +113,8 @@ Install this project with:
 
 3.  gem 'rubocop', '>= 1.0', '< 2.0'
 
+4.  gem 'rspec-rails'
+
 ### Usage
 
 To run the project, execute the following command:
@@ -136,6 +140,13 @@ To check for Ruby errors:
 
 - To fix Ruby linters error:
 - rubocup -A
+
+- To install RSpec:
+- bundle install
+- rails generate rspec:install
+
+- To run test:
+- rspec
 
 <!--
 Example:
@@ -163,9 +174,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add associations]**
 - [ ] **[Add controller and configure the view]**
-- [ ] **[Methods in models to interact directly with database for specific requirements]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
