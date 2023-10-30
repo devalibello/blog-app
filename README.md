@@ -81,8 +81,10 @@ After you're finished please remove all the comments and instructions!
 
 - **[ Has database tables schema integrated with PostgreSQL ]**
 - **[ Has linters setup enforcing best coding practices ]**
-- [ ] **[Methods in models to interact directly with database for specific requirements]**
-- [ ] **[Contails test files for validations and methods using RSpec]**
+- **[ Methods in models to interact directly with database for specific requirements ]**
+- **[ Contails test files for validations and methods using RSpec ]**
+- **[ Has posts and users controllers ]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,7 +176,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add controller and configure the view]**
+- [ ] **[Customize view for post and user controllers]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
