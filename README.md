@@ -84,7 +84,7 @@ After you're finished please remove all the comments and instructions!
 - **[ Methods in models to interact directly with database for specific requirements ]**
 - **[ Contails test files for validations and methods using RSpec ]**
 - **[ Has posts and users controllers ]**
-
+- **[ RSpecs for controler actions using request testing ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
