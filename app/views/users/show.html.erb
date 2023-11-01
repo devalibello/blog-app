@@ -1,1 +1,36 @@
-<h1>Show details of a particular user</h1>
+<header>
+    <%= stylesheet_link_tag 'users_show' %>
+</header>
+
+<div class="all-users">
+    <div class="user-show-container">
+        <div class="photo-container">
+            <img src="<%= @user.photo %>" alt="user photo" class="user-photo">
+        </div>
+        <div class="user-section">
+            <div class="username"><%= @user.name %></div>
+            <div class="post-count">Number of posts: <%= @user.postcounter %></div>
+        </div> <br>
+    </div>
+    <div class="bio-section">
+        <div class="bio">
+            Bio
+        </div>
+        <div class="bio-text">
+            <%= @user.bio %>
+        </div>
+    </div>
+    <% @ordered_post = @user.posts.order(created_at: :asc).limit(3) %>
+    <% @ordered_post.each do |post| %>
+    <div class="bio-section">
+        <div class="bio">
+            Post #<%= post.id %>
+        </div>
+        <div class="bio-text">
+            <div class="post-text"><%= post.text %></div>
+            <div class="comments-likes-counter">Comments: <%= post.commentscounter %>, Likes: <%= post.likescounter %></div>
+        </div>
+    </div>
+    <% end %>
+    <%= link_to "See all posts", user_posts_path(user_id: @user.id), class: "see-more" %>
+</div>

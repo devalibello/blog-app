@@ -1,1 +1,41 @@
-<h1>Display posts of user</h1>
+<header>
+    <%= stylesheet_link_tag 'posts_index' %>
+</header>
+
+<div class="all-users">
+    <div class="user-show-container">
+        <div class="photo-container">
+            <img src="<%= @user.photo %>" alt="user photo" class="user-photo">
+        </div>
+        <div class="user-section">
+            <div class="username"><%= @user.name %></div>
+            <div class="post-count">Number of posts: <%= @user.postcounter %></div>
+        </div> <br>
+    </div>
+    <% @ordered_post = @user.posts.order(created_at: :asc).limit(2) %>
+    <% @ordered_post.includes([:comments]).each do |post| %>
+    <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: "post-section" do %>
+        <div class="bio">
+            Post #<%= post.id %>
+        </div>
+        <div class="bio-text">
+            <div class="post-text"><%= post.text %></div>
+            <div class="post-comments-likes">Comments: <%= post.comments.count %> Likes: <%= post.likes.count %></div>
+        </div>  
+     <% end %>
+     <% if post.comments.present? %>
+        <div class="comment-section">
+            <% max_comments = post.comments.order(created_at: :asc).limit(5) %>
+            <% max_comments.each do |comment| %>
+            <div class="comment"><%= comment.user.name %>: <%= comment.text%></div>
+            <% end %>
+        </div>
+    <% end %>
+    <% end %>
+    <% if @user.posts.count >= 2 %>
+    <div class="pagination">Pagination</div>
+    <% end %>
+
+
+</div>
+

@@ -1,1 +1,18 @@
-<h1>List of all users</h1>
+<header>
+    <%= stylesheet_link_tag 'users_index' %>
+</header>
+<main class="all-users">
+    <% @user.each do |user| %>
+        <div class="user-container">
+            <%= link_to user_path(id: user.id) do %>
+                <div class="photo-container">
+                    <img src="<%= user.photo %>" alt="user photo" class="user-photo">
+                </div>
+            <% end %>
+            <div class="user-section">
+                <div class="username"><%= link_to "#{user.name}", user_path(id: user.id) %></div>
+                <div class="post-count">Number of posts: <%= user.postcounter %></div>
+            </div> <br>
+        </div>
+    <% end %>
+</main>
