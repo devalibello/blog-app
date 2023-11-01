@@ -85,6 +85,8 @@ After you're finished please remove all the comments and instructions!
 - **[ Contails test files for validations and methods using RSpec ]**
 - **[ Has posts and users controllers ]**
 - **[ RSpecs for controler actions using request testing ]**
+- **[ Views for User and Post controllers to display content of data base to the user ]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +135,7 @@ To check for CSS or SCSS errors:
   npx stylelint "\*_/_.{css,scss}"
 
 - To fix CSS or SCSS linters error:
-  npx stylelint "\*_/_.{css,scss}" --fix
+  npx stylelint "**/*.{css,scss}" --fix
 
 To check for Ruby errors:
 
