@@ -20,7 +20,7 @@
             <%= @user.bio %>
         </div>
     </div>
-    <% @ordered_post = @user.posts.order(created_at: :asc).limit(3) %>
+    <% @ordered_post = @user.three_most_recent_posts %>
     <% @ordered_post.each do |post| %>
     <div class="bio-section">
         <div class="bio">

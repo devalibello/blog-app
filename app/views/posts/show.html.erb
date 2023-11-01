@@ -4,8 +4,11 @@
 
 <section class="main-post">
     <div class="post-container">
-        <div class="post-info">Post #<%= @posts.id %> by <%= @posts.author.name %></div>
-        <div class="post-comments-likes">Comments: <%= @posts.comments.count %> Likes: <%= @posts.likes.count %></div>
+        <div class="post-info-container">
+            <div class="post-info">Post #<%= @posts.id %> by <%= @posts.author.name %></div>
+            <div class="post-comments-likes">Comments: <%= @posts.comments.count %> Likes: <%= @posts.likes.count %></div>
+        </div>
+        
         <div class="post-text"><%= @posts.text %></div>
     </div>
     <% if @posts.comments.present? %>

@@ -25,7 +25,7 @@
      <% end %>
      <% if post.comments.present? %>
         <div class="comment-section">
-            <% max_comments = post.comments.order(created_at: :asc).limit(5) %>
+            <% max_comments = post.first_five_posts %>
             <% max_comments.each do |comment| %>
             <div class="comment"><%= comment.user.name %>: <%= comment.text%></div>
             <% end %>

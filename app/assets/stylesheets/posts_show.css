@@ -26,3 +26,9 @@
   padding: 10px;
   margin-top: -18px;
 }
+
+.post-info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
