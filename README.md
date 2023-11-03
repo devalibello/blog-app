@@ -86,7 +86,8 @@ After you're finished please remove all the comments and instructions!
 - **[ Has posts and users controllers ]**
 - **[ RSpecs for controler actions using request testing ]**
 - **[ Views for User and Post controllers to display content of data base to the user ]**
-
+- **[ Form to add post and comments ]**
+- **[ Contains comment controller ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,7 +136,7 @@ To check for CSS or SCSS errors:
   npx stylelint "\*_/_.{css,scss}"
 
 - To fix CSS or SCSS linters error:
-  npx stylelint "**/*.{css,scss}" --fix
+  npx stylelint "\*_/_.{css,scss}" --fix
 
 To check for Ruby errors:
 
@@ -143,7 +144,7 @@ To check for Ruby errors:
 - rubocup
 
 - To fix Ruby linters error:
-- rubocup -A
+- rubocop -A
 
 - To install RSpec:
 - bundle install
