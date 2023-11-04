@@ -1,0 +1,22 @@
+<section class="new-post-section">
+    <div class="new-post">
+        <h1 class="new-post-text">New Post</h1>
+       
+        <%= form_with model: @post, format: :html, url: user_posts_path do |form| %>
+        <% if @post.errors.any? %>
+            <% @post.errors.full_messages.each do |message| %>
+            <%= message %>
+            <% end %>
+        <% end %>
+        <div class="post-title">
+            <%= form.label :title %> <br>
+            <%= form.text_field :title %>
+        </div> 
+        <div class="post-text">
+            <%= form.label :text %> <br>
+            <%= form.text_field :text %>
+        </div> 
+        <%= form.submit class: "create-post-btn" %>
+        <% end %>
+    </div>
+</section>
