@@ -26,4 +26,30 @@ RSpec.describe 'User Integration', type: :system do
     sleep(5)
     expect(current_path).to eq(user_post_path(user_id: @user1.id, id: post1.id))
   end
+
+  it 'redirects to see all user posts' do
+    visit user_path(@user1)
+    click_link('See all posts')
+    sleep(5)
+    expect(current_path).to eq(user_posts_path(user_id: @user1.id))
+  end
+
+  it 'display user post index page' do
+    post1 = Post.create(id: 105, author: @user1, title: 'Post title 1 by User 1', text: 'Post 1 by User 1', commentscounter: 0,
+                        likescounter: 0)
+    post2 = Post.create(id: 106, author: @user1, title: 'Post title 2 by User 1', text: 'Post 2 by User 1', commentscounter: 0,
+                        likescounter: 0)
+    Comment.create(post: post1, user: @user1, text: 'User 1 sample comment 1')
+    Comment.create(post: post1, user: @user2, text: 'User 2 sample comment 1')
+    Comment.create(post: post2, user: @user1, text: 'User 1 sample comment 1')
+    Comment.create(post: post2, user: @user2, text: 'User 2 sample comment 1')
+    visit user_posts_path(user_id: @user1.id)
+    sleep(5)
+    expect(page).to have_content('Username 1')
+    find("img[src='test1.jpg']")
+    expect(page).to have_content('User 1 sample comment 1')
+    expect(page).to have_content('Comments: 2')
+    expect(page).to have_content('Likes: 0')
+    expect(page).to have_content('Pagination')
+  end
 end
