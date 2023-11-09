@@ -86,6 +86,8 @@ After you're finished please remove all the comments and instructions!
 - **[ Views for User and Post controllers to display content of data base to the user ]**
 - **[ Form to add post and comments ]**
 - **[ Contains comment controller ]**
+- **[ Add integration test for post and users ]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,7 +136,7 @@ To check for CSS or SCSS errors:
   npx stylelint "\*_/_.{css,scss}"
 
 - To fix CSS or SCSS linters error:
-  npx stylelint "\*_/_.{css,scss}" --fix
+  npx stylelint "**/*.{css,scss}" --fix
 
 To check for Ruby errors:
 

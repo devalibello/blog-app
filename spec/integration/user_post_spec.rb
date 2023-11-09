@@ -7,8 +7,8 @@ RSpec.describe 'User Integration', type: :system do
   end
 
   it 'redirect to the post show page' do
-    post1 = Post.create(id: 103, author: @user1, title: 'Post title 1 by User 1', text: 'Post 1 by User 1', commentscounter: 0,
-                        likescounter: 0)
+    post1 = Post.create(id: 103, author: @user1, title: 'Post title 1 by User 1',
+                        text: 'Post 1 by User 1', commentscounter: 0, likescounter: 0)
     Comment.create(post: post1, user: @user1, text: 'User 1 sample comment 1')
 
     visit user_post_path(user_id: @user1.id, id: post1.id)
@@ -19,8 +19,8 @@ RSpec.describe 'User Integration', type: :system do
   end
 
   it 'redirect to user show page on clicking post' do
-    post1 = Post.create(id: 103, author: @user1, title: 'Post title 1 by User 1', text: 'Post 1 by User 1', commentscounter: 0,
-                        likescounter: 0)
+    post1 = Post.create(id: 103, author: @user1, title: 'Post title 1 by User 1',
+                        text: 'Post 1 by User 1', commentscounter: 0, likescounter: 0)
     visit user_posts_path(user_id: @user1.id)
     click_link('Post 1 by User 1')
     sleep(5)
@@ -35,10 +35,10 @@ RSpec.describe 'User Integration', type: :system do
   end
 
   it 'display user post index page' do
-    post1 = Post.create(id: 105, author: @user1, title: 'Post title 1 by User 1', text: 'Post 1 by User 1', commentscounter: 0,
-                        likescounter: 0)
-    post2 = Post.create(id: 106, author: @user1, title: 'Post title 2 by User 1', text: 'Post 2 by User 1', commentscounter: 0,
-                        likescounter: 0)
+    post1 = Post.create(id: 105, author: @user1, title: 'Post title 1 by User 1',
+                        text: 'Post 1 by User 1', commentscounter: 0, likescounter: 0)
+    post2 = Post.create(id: 106, author: @user1, title: 'Post title 2 by User 1',
+                        text: 'Post 2 by User 1', commentscounter: 0, likescounter: 0)
     Comment.create(post: post1, user: @user1, text: 'User 1 sample comment 1')
     Comment.create(post: post1, user: @user2, text: 'User 2 sample comment 1')
     Comment.create(post: post2, user: @user1, text: 'User 1 sample comment 1')
