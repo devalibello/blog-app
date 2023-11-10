@@ -13,7 +13,7 @@
         </div> <br>
     </div>
     <% @ordered_post = @user.posts.order(created_at: :asc).limit(2) %>
-    <% @ordered_post.includes([:comments]).each do |post| %>
+    <% @ordered_post.includes(:author, :likes, :comments).each do |post| %>
     <%= link_to user_post_path(user_id: post.author_id, id: post.id), class: "post-section" do %>
         <div class="bio">
             Post #<%= post.id %>
