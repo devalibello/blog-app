@@ -1,7 +1,16 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @author = @post.author
+    @author.decrement!(:postcounter)
+    @post.destroy
+    redirect_to user_posts_path(id: @author.id), notice: 'Post removed !'
   end
 
   def new
@@ -10,6 +19,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def create
