@@ -13,7 +13,7 @@
     </div>
     <% if @post.comments.present? %>
     <div class="post-comment-section">
-        <% @post.comments.include(:user).each do |comment| %>
+        <% @post.comments.includes(:user).each do |comment| %>
         <div class="comment"><%= comment.user.name %>: <%= comment.text%></div>
         <% end %>
     </div>
