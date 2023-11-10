@@ -171,6 +171,13 @@ Example:
 - Twitter: [@twitterhandle](https://twitter.com/i_am_aalee)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ali-bello-imoukhuede/)
 
+
+👤 **Nnamani Stanley Wisdom**
+
+- GitHub: [@githubhandle](https://github.com/starmindz)
+- Twitter: [@twitterhandle](https://twitter.com/starminds5)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stanley-nnamani)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
