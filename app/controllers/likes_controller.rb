@@ -3,9 +3,9 @@ class LikesController < ApplicationController
     @like = @current_user.likes.build(post: find_post)
 
     if @like.save
-      redirect_to user_post_path(user_id: params[:user_id], id: params[:post_id]), 'Post liked!'
+      redirect_to user_post_path(user_id: params[:user_id], id: params[:post_id]), notice: 'Post liked!'
     else
-      redirect_to user_post_path(user_id: params[:user_id], id: params[:post_id]), 'Unable to like the post.'
+      redirect_to user_post_path(user_id: params[:user_id], id: params[:post_id])
     end
   end
 
