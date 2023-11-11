@@ -30,7 +30,7 @@ development:
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: Stark*369
+  password: mascotss
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -57,7 +57,7 @@ test:
   <<: *default
   database: blog_app_development_2
   username: postgres
-  password: Stark*369
+  password: mascotss
   host: localhost
   port: 5432
 
