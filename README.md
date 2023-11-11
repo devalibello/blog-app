@@ -88,7 +88,6 @@ After you're finished please remove all the comments and instructions!
 - **[ Contains comment controller ]**
 - **[ Authorization using cancancan ]**
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -136,7 +135,7 @@ To check for CSS or SCSS errors:
   npx stylelint "\*_/_.{css,scss}"
 
 - To fix CSS or SCSS linters error:
-  npx stylelint "\*_/_.{css,scss}" --fix
+  npx stylelint "**/*.{css,scss}" --fix
 
 To check for Ruby errors:
 
