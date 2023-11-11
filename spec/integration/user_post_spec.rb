@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+#integration tests for posts a users
 RSpec.describe 'User Integration', type: :system do
   before do
     @user1 = User.create(id: 100, name: 'Username 1', photo: 'test1.jpg', postcounter: 10, bio: 'User 1 bio')
